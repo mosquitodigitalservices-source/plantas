@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Qué puede cargar la app: scripts propios y el SDK de Firebase; conexiones a Firebase y Pl@ntNet; imágenes solo propias o incrustadas. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://apis.google.com; connect-src 'self' data: blob: https://www.gstatic.com https://*.googleapis.com https://my-api.plantnet.org; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; frame-src https://plantas-d89b6.firebaseapp.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>Plantas</title>
+  <meta name="description" content="Cuida tus plantas de casa: identifícalas, recuerda cuándo regarlas y anota lo que haces.">
+  <meta name="theme-color" content="#f4f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1310" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Plantas">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/app-180.png">
+  <link rel="icon" href="icons/app-192.png">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="sr-only" href="#view">Ir al contenido</a>
+  <div class="app">
+    <main id="view" tabindex="-1" aria-live="polite"></main>
+  </div>
+  <nav class="tabbar" aria-label="Principal">
+    <a class="tab" href="#/" data-tab="home"><span class="tab__icon"><svg class="icon" aria-hidden="true"><use href="icons/icons.svg#home"/></svg><span class="tab__badge" id="badge" hidden></span></span>Hoy</a>
+    <a class="tab" href="#/plantas" data-tab="plants"><span class="tab__icon"><svg class="icon" aria-hidden="true"><use href="icons/icons.svg#leaf"/></svg></span>Plantas</a>
+    <a class="tab tab--camera" href="#/camara" data-tab="camera" aria-label="Identificar una planta"><span class="tab__fab"><svg class="icon" aria-hidden="true"><use href="icons/icons.svg#camera"/></svg></span></a>
+    <a class="tab" href="#/calendario" data-tab="calendar"><span class="tab__icon"><svg class="icon" aria-hidden="true"><use href="icons/icons.svg#calendar"/></svg></span>Calendario</a>
+    <a class="tab" href="#/ajustes" data-tab="settings"><span class="tab__icon"><svg class="icon" aria-hidden="true"><use href="icons/icons.svg#sliders"/></svg></span>Ajustes</a>
+  </nav>
+  <div class="toast-region" id="toasts" aria-live="polite"></div>
+  <noscript><p style="padding: 16px">Esta app necesita JavaScript.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Generado por tools/build_tokens.py. No lo edites a mano: cambia replica/design/tokens*.json. */
+
+:root {
+  color-scheme: light dark;
+  --c-bg: #f4f6f3;
+  --c-surface: #ffffff;
+  --c-surface-sunken: #eaeee9;
+  --c-border: #dde3dc;
+  --c-border-input: #7a857d;
+  --c-text: #16201a;
+  --c-text-muted: #56625a;
+  --c-accent: #2c6a48;
+  --c-accent-strong: #1f4f35;
+  --c-on-accent: #ffffff;
+  --c-accent-soft: #e2efe6;
+  --c-danger: #b3261e;
+  --c-danger-soft: #fbe9e7;
+  --c-success: #1d7343;
+  --c-warning: #7f5200;
+  --c-warning-soft: #fcf0d6;
+  --c-water: #1c5aa0;
+  --c-water-soft: #e3eefa;
+  --c-fertilize: #7a4a10;
+  --c-fertilize-soft: #f6ecdc;
+  --shadow-card: 0 1px 2px rgba(22,32,26,.06), 0 1px 3px rgba(22,32,26,.08);
+  --shadow-pop: 0 12px 32px rgba(22,32,26,.18);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --text-xs: 12px;
+  --leading-xs: 16px;
+  --weight-xs: 500;
+  --text-sm: 15px;
+  --leading-sm: 20px;
+  --weight-sm: 400;
+  --text-base: 17px;
+  --leading-base: 24px;
+  --weight-base: 400;
+  --text-lg: 20px;
+  --leading-lg: 26px;
+  --weight-lg: 600;
+  --text-xl: 28px;
+  --leading-xl: 34px;
+  --weight-xl: 700;
+  --text-display: 34px;
+  --leading-display: 40px;
+  --weight-display: 700;
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 48px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --motion-fast: 120ms;
+  --motion-base: 220ms;
+  --motion-ease: cubic-bezier(.2,.8,.2,1);
+  --layout-content-max: 640px;
+  --layout-header: 52px;
+  --layout-tabbar: 56px;
+  --layout-touch-min: 44px;
+  --layout-gutter: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-bg: #0e1310;
+    --c-surface: #182019;
+    --c-surface-sunken: #121813;
+    --c-border: #2a342d;
+    --c-border-input: #75827a;
+    --c-text: #edf2ee;
+    --c-text-muted: #a2aea6;
+    --c-accent: #74c69a;
+    --c-accent-strong: #9ad8b5;
+    --c-on-accent: #0a1a11;
+    --c-accent-soft: #1e3428;
+    --c-danger: #ff8a80;
+    --c-danger-soft: #3a1c1a;
+    --c-success: #6fd09a;
+    --c-warning: #f2c46d;
+    --c-warning-soft: #372b12;
+    --c-water: #86b6f0;
+    --c-water-soft: #172a40;
+    --c-fertilize: #dcaa6a;
+    --c-fertilize-soft: #33271a;
+    --shadow-card: 0 1px 2px rgba(0,0,0,.4);
+    --shadow-pop: 0 12px 32px rgba(0,0,0,.55);
+  }
+}
+
+:root[data-theme="dark"] {
+  --c-bg: #0e1310;
+  --c-surface: #182019;
+  --c-surface-sunken: #121813;
+  --c-border: #2a342d;
+  --c-border-input: #75827a;
+  --c-text: #edf2ee;
+  --c-text-muted: #a2aea6;
+  --c-accent: #74c69a;
+  --c-accent-strong: #9ad8b5;
+  --c-on-accent: #0a1a11;
+  --c-accent-soft: #1e3428;
+  --c-danger: #ff8a80;
+  --c-danger-soft: #3a1c1a;
+  --c-success: #6fd09a;
+  --c-warning: #f2c46d;
+  --c-warning-soft: #372b12;
+  --c-water: #86b6f0;
+  --c-water-soft: #172a40;
+  --c-fertilize: #dcaa6a;
+  --c-fertilize-soft: #33271a;
+  --shadow-card: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-pop: 0 12px 32px rgba(0,0,0,.55);
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }

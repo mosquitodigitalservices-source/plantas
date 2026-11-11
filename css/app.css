@@ -1,0 +1,82 @@
+/* Ajustes de pantalla propios de la app (los componentes están en components.css). Solo variables de tokens. */
+
+#view:focus { outline: none; }
+.screen { display: grid; gap: var(--space-5); padding-bottom: var(--space-5); }
+.screen > .navbar + * { margin-top: calc(var(--space-5) * -1 + var(--space-2)); }
+.lead { color: var(--c-text-muted); }
+
+.back { margin-left: calc(var(--space-2) * -1); }
+
+/* Cámara */
+.capture { display: grid; gap: var(--space-3); }
+.capture input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.capture__shutter { position: relative; display: grid; place-items: center; cursor: pointer; }
+/* Identificar: la cámara es la protagonista y ocupa casi toda la pantalla */
+.shoot {
+  --ring: min(68vw, 46svh, 340px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-3);
+  min-height: calc(100svh - var(--layout-header) - var(--layout-tabbar) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - var(--space-8) * 2);
+  text-align: center;
+}
+.shoot__button { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.shoot__ring {
+  display: grid; place-items: center; width: var(--ring); height: var(--ring); margin-bottom: var(--space-5);
+  border-radius: var(--radius-pill); background: var(--c-accent); color: var(--c-on-accent);
+  box-shadow: 0 0 0 calc(var(--ring) * .05) var(--c-accent-soft), 0 0 0 calc(var(--ring) * .1) color-mix(in srgb, var(--c-accent-soft) 45%, transparent), var(--shadow-pop);
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+.shoot__button:active .shoot__ring { transform: scale(.96); }
+.shoot__button:focus-within .shoot__ring { outline: 3px solid var(--c-accent); outline-offset: calc(var(--ring) * .12); }
+.icon.shoot__icon { width: 42%; height: 42%; stroke-width: 1.4; }
+.shoot__title { font-size: var(--text-xl); line-height: var(--leading-xl); font-weight: var(--weight-xl); letter-spacing: -0.01em; }
+.shoot__subtitle { font-size: var(--text-base); line-height: var(--leading-base); color: var(--c-text-muted); }
+.shoot__gallery { margin-top: var(--space-2); }
+.shoot__busy { color: var(--c-text-muted); }
+.shoot--busy .shoot__button, .shoot--busy .shoot__gallery { pointer-events: none; }
+.shoot--busy .shoot__ring { animation: pulse-soft 1.1s ease-in-out infinite; }
+@keyframes pulse-soft { 50% { transform: scale(1.04); } }
+.capture__tips { display: grid; gap: var(--space-2); padding-left: var(--space-5); margin: 0; color: var(--c-text-muted); font-size: var(--text-sm); }
+
+/* Resultado de identificación */
+.result-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-lg); background: var(--c-surface-sunken); }
+.match { color: inherit; text-decoration: none; }
+.match__photo img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+button.match { width: 100%; text-align: left; border: 0; font: inherit; cursor: pointer; }
+
+/* Formulario de añadir */
+.choice { display: grid; gap: var(--space-2); }
+.choice label {
+  display: flex; align-items: center; gap: var(--space-3); min-height: var(--layout-touch-min);
+  padding: var(--space-2) var(--space-4); border-radius: var(--radius-md);
+  background: var(--c-surface); border: 1px solid var(--c-border); cursor: pointer;
+}
+.choice input { accent-color: var(--c-accent); width: 20px; height: 20px; margin: 0; flex: none; }
+.choice label:has(input:checked) { border-color: var(--c-accent); background: var(--c-accent-soft); }
+.species-head { display: flex; gap: var(--space-3); align-items: center; }
+.species-head img, .species-head .match__photo { width: 72px; height: 72px; border-radius: var(--radius-md); object-fit: cover; flex: none; }
+
+/* Detalle de planta */
+.hero-photo { width: 100%; aspect-ratio: 1; max-height: 360px; object-fit: cover; border-radius: var(--radius-lg); background: var(--c-surface-sunken); display: grid; place-items: center; color: var(--c-text-muted); }
+.hero-photo .icon { width: 48px; height: 48px; }
+
+.task__link { display: block; color: inherit; text-decoration: none; }
+
+/* Historial */
+.history { list-style: none; margin: 0; padding: 0; }
+.history li { display: flex; gap: var(--space-3); align-items: center; padding: var(--space-2) 0; }
+.history li + li { border-top: 1px solid var(--c-border); }
+.history .icon { color: var(--c-text-muted); }
+.history time { margin-left: auto; font-size: var(--text-sm); color: var(--c-text-muted); white-space: nowrap; }
+
+/* Galería */
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.gallery img, .gallery__add { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); }
+.gallery__add { display: grid; place-items: center; background: var(--c-surface-sunken); color: var(--c-text-muted); cursor: pointer; }
+.gallery__add input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.textarea { min-height: 96px; padding: var(--space-3); resize: vertical; line-height: var(--leading-base); }
+.actions-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+
+/* Stub */
+.stub { color: var(--c-text-muted); }
+
+.footnote { font-size: var(--text-xs); line-height: var(--leading-xs); color: var(--c-text-muted); font-weight: 400; }
